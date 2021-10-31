@@ -14,3 +14,22 @@
 .nav-link{
   color: hsl(334, 85%, 30%) !important;
 }
+.card{
+  width: 100%
+}
+.cardContainer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+}
+.cardContainer a{
+  color: black;
+  text-decoration: none;
+}
+.card-img-top{
+  width: 20em;
+  margin: auto;
+}
+.card-footer{
+  margin-bottom: 0;
+}
