@@ -11,7 +11,9 @@ function App() {
     <Switch>
           <Route path="/" exact component={() => <Home />} />
           <Route path="/about" exact component={() => <About />} />
-          <Route path="/journals" exact component={() => <Journals />} />
+          <Route path="/journals">
+           <Journals />
+           </Route>
         </Switch>
         <Footer/>
     </HashRouter>

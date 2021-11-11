@@ -3,7 +3,9 @@
   justify-content: space-between;
   align-items: center;
 }
-
+.navigation{
+  border-bottom: 2px solid hsl(334, 85%, 30%);
+}
 .navLinks a {
   padding: 0em 1em;
 }
@@ -15,12 +17,19 @@
   color: hsl(334, 85%, 30%) !important;
 }
 .card{
-  width: 100%
+  width: 100%;
+}
+.card:hover{
+border: 5px solid hsl(44, 100%, 61%);
+border-radius: 2%;
+transition: border ease 5s;
 }
 .cardContainer{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: auto;
+  padding: 1em 1em 0;
+  grid-column-gap: 20px;
 }
 .cardContainer a{
   color: black;

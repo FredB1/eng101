@@ -3,17 +3,20 @@
     "title": "test 1",
     "url": "test1",
     "img": "https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    "date": "October 31, 2021"},
+    "date": "October 31, 2021",
+"content": "lot of html1"},
     {"id": 1,
         "title": "test 2",
         "url": "test2",
         "img": "https://images.pexels.com/photos/7640773/pexels-photo-7640773.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "date": "October 31, 2021"},
+        "date": "October 31, 2021",
+        "content": "lot of html2"},
         {"id": 2,
             "title": "test 3",
             "url": "test3",
             "img": "https://images.pexels.com/photos/8617636/pexels-photo-8617636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            "date": "October 31, 2021"}
+            "date": "October 31, 2021",
+            "content": "lot of html3"}
     ]
 
 }

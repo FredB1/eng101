@@ -1,6 +1,7 @@
 import {  withRouter } from "react-router-dom";
 import React,{useState,useEffect} from 'react';
-
+import { HashRouter, Route, Switch, Link, useParams, useRouteMatch } from "react-router-dom";
+import JournalPage from './JournalPage.js';
 const Journals = () => {
   const [data,setData]=useState([]);
 
@@ -14,33 +15,37 @@ const Journals = () => {
         }
         )
           .then(function(response){
-            console.log(response)
             return response.json();
           })
           .then(function(myJson) {
-            console.log(myJson);
             setData(myJson.blogs);
           });
       }
   useEffect(()=>{
     getData()
   },[])
-  console.log(data)
 
-    return (
-        <div class="cardContainer">
-            {data && data.length>0 && data.map((item)=>
-                <a href="">
-                    <div class="card" id={item.id}>
-                        <div class="card-header">{item.title}</div>
-                        <img src={item.img} class="card-img-top" alt={item.title}></img>
-                        <p class="card-footer text-muted">{item.date}</p>
-                    </div>
-                </a>
-                   )}
+  let match = useRouteMatch();
 
-
-        </div>
+    return (<Switch>
+            <Route exact path="/journals">
+          <div class="cardContainer">
+              {data && data.length>0 && data.map((item)=>
+                  <Link to={"journals/" + item.url} key={item.id}>
+                      <div class="card" >
+                          <div class="card-header">{item.title}</div>
+                          <img src={item.img} class="card-img-top" alt={item.title}></img>
+                          <p class="card-footer text-muted">{item.date}</p>
+                      </div>
+                  </Link>
+                     )}
+          </div>
+          </Route>
+          <Route path={`/journals/:id`}>
+          <JournalPage />
+        </Route>
+    </Switch>
+        
         
             )
 }
