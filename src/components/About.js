@@ -1,5 +1,5 @@
 import React from "react";
-import {  withRouter } from "react-router-dom";
+import {   } from "react-router-dom";
 
 const About = () => {
     return (
@@ -28,4 +28,4 @@ const About = () => {
             )
 }
 
-export default withRouter(About);
+export default (About);

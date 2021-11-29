@@ -1,22 +1,21 @@
 import React from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Routes, Route, BrowserRouter as Router} from "react-router-dom";
 import './App.css';
 import {About, Header, Home, Journals, Footer} from './components'
-
+import {JournalPage} from './components/JournalPage';
 function App() {
   return (
     <div className="App">
-    <HashRouter basename="/">
+    <Router basename="/">
     <Header/>
-    <Switch>
-          <Route path="/" exact component={() => <Home />} />
-          <Route path="/about" exact component={() => <About />} />
-          <Route path="/journals">
-           <Journals />
-           </Route>
-        </Switch>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/about" element={<About />} />
+            <Route path="/journals" element={<Journals />}/>
+            <Route path="/journals/:title" element={<JournalPage />}/>
+          </Routes>
         <Footer/>
-    </HashRouter>
+    </Router>
     </div>
   );
 }

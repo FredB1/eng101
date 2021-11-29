@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link  } from "react-router-dom";
 
 const Header = (props) => {
     return (
@@ -8,9 +8,9 @@ const Header = (props) => {
             
                 <Link className="navbar-brand" to="/">English 101 with Fred</Link>
                 <div className="navbar-nav ml-auto">
-                    <Link to="/" className={props.location.pathname === "/" ? "active nav-link" : "nav-link"}>Home</Link>
-                    <Link to="/about" className={props.location.pathname === "/about" ? "active nav-link" : "nav-link"}>About</Link>
-                    <Link to="/journals" className={props.location.pathname === "/journals" ? "active nav-link" : "nav-link"}>Writer's Journals</Link>
+                    <Link to="/" className={"nav-link"} activestyle={"active nav-link"}>Home</Link>
+                    <Link to="/about" className={"nav-link"} activestyle={"active nav-link"}>About</Link>
+                    <Link to="/journals" className={"nav-link"} activestyle={"active nav-link"}>Writer's Journals</Link>
                  </div>
             </nav>
         </div>
@@ -18,4 +18,4 @@ const Header = (props) => {
             )
 }
 
-export default withRouter(Header);
+export default (Header);

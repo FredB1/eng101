@@ -1,7 +1,6 @@
-import {  withRouter } from "react-router-dom";
 import React,{useState,useEffect} from 'react';
-import { HashRouter, Route, Switch, Link, useParams, useRouteMatch } from "react-router-dom";
-import JournalPage from './JournalPage.js';
+import { BrowserRouter, Route, Link, useParams, Routes, Outlet } from "react-router-dom";
+import {JournalPage} from './JournalPage.js';
 const Journals = () => {
   const [data,setData]=useState([]);
 
@@ -25,29 +24,24 @@ const Journals = () => {
     getData()
   },[])
 
-  let match = useRouteMatch();
+  let match = ""
 
-    return (<Switch>
-            <Route exact path="/journals">
-          <div class="cardContainer">
-              {data && data.length>0 && data.map((item)=>
-                  <Link to={"journals/" + item.url} key={item.id}>
-                      <div class="card" >
-                          <div class="card-header">{item.title}</div>
-                          <img src={item.img} class="card-img-top" alt={item.title}></img>
-                          <p class="card-footer text-muted">{item.date}</p>
-                      </div>
-                  </Link>
-                     )}
-          </div>
-          </Route>
-          <Route path={`/journals/:id`}>
-          <JournalPage />
-        </Route>
-    </Switch>
+    return (
+              
+                          <div class="cardContainer">
+                  {data && data.length>0 && data.map((item)=>
+                      <Link to={item.url} key={item.id}>
+                          <div class="card" >
+                              <div class="card-header">{item.title}</div>
+                              <img src={item.img} class="card-img-top" alt={item.title}></img>
+                              <p class="card-footer text-muted">{item.date}</p>
+                          </div>
+                      </Link>
+                         )}
+                          </div>
         
         
             )
 }
 
-export default withRouter(Journals);
+export default (Journals);

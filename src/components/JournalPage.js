@@ -1,35 +1,39 @@
-import {  withRouter } from "react-router-dom";
+
 import React,{useState,useEffect} from 'react';
-import { HashRouter, Route, Switch, Link, useParams, useRouteMatch } from "react-router-dom";
+import { Route, Link, useParams } from "react-router-dom";
 
-const JournalPage = (props)=> {
-  let { id } = useParams();
+const JournalPage = ()=> {
+  const { title } = useParams();
   const [data,setData]=useState([]);
+  const [post, setPost]= useState([]);
 
-  const getData=()=>{
-      fetch('data.json'
-      ,{
-        headers : { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-         }
-      }
-      )
-        .then(function(response){
-          return response.json();
-        })
-        .then(function(myJson) {
-          setData(myJson.blogs);
-        });
+  const getData= ()=>{
+    fetch('http://localhost:3000/data.json'
+    ,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
     }
+    )
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(myJson) {
+        setData(myJson.blogs);
+        setPost(data && data.find(post => post.url === title ))
+      })
+  }
+
 useEffect(()=>{
   getData()
-},[])
-let post = data.find(post => post.url === id )
-console.log(post)
-return(
+ 
+},[post])
 
-<div>  {post.content}
+return(<div>
+<h1>{post && post.title} </h1>
+<p> {post && post.content}</p>
 </div>
+
 )}
-export default JournalPage
+export  {JournalPage};
