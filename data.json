@@ -1,0 +1,29 @@
+{
+    "blogs": [{"id": 0,
+        "title": "Writing",
+        "url": "writing",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/British_Museum_Flood_Tablet.jpg/800px-British_Museum_Flood_Tablet.jpg",
+        "date": "December 1, 2021",
+    "content": "&nbsp;&nbsp;&nbsp;&nbsp; Throughout my years as a student I have written many papers so this is a cherished topic. Writing can take on different styles but in essence I like to think of it as the communication of ideas through text. Early on in my life I learned the basics of writing along with reading while in school. Even at that early age we practiced similar habits of mind including creativity, flexibility and metacognition. <br /> &nbsp;&nbsp;&nbsp;&nbsp; History teaches us that writing was developed as a way to track transactions. We often write journals or blogs about what is happening in our daily life. However that may not be what’s most admired by us, we are more likely to enjoy a good story. Such as the Epic of Gilgamesh, one of the first the earliest written texts. Fictional tales like this are amazing for developing the creativity of writers which is one of the reasons it is still known of today. When writing either factual accounts or completely fictional it is the communication of ideas that intrigues us the most.  <br /> &nbsp;&nbsp;&nbsp;&nbsp; The process of learning to write starts at a young age. As kids when we start school we are introduced to the alphabet so we can start reading and writing small words. While progressing through school we read and write much more. Some of my favorite authors to read are J.K.Rowling, James Patterson and Scott Galloway. Although these authors write about different topics or within different genres they have the ability to communicate ideas that are entertaining to the reader. This has taught me the importance of analogies and metaphors. These literary concepts keep readers engaged like they are watching a martial arts master practicing his craft. Just like any craft must continue practicing writing to learn how to connect with different audiences or as described in this course rhetorical knowledge.  <br /> &nbsp;&nbsp;&nbsp;&nbsp; My understanding of writing also includes the important habits of mind. Creativity within writing is very interesting. It allows the reader the opportunity to think about your ideas in a way that they have not heard before. Along with that flexibility allows us to write on a broad range of topics. This ranges from serious writing such as a sermon or biography to more creative and playful writing like romance novels and comic books. It will be important to be mindful of staying flexible as writers as we develop our rhetorical knowledge. As we develop our skills as writers metacognition becomes ever more important, the ability to think about what we have written in the past and improve upon those ideas for even greater clarity to the reader.  <br /> &nbsp;&nbsp;&nbsp;&nbsp; As expressed writing is a craft that you can practice but it will take a long time to master it. Even when you feel masterful there are more audiences to write for and styles of writing you can practice. My understanding of writing is that you can always continue to grow. Throughout this course we will continue to practice habits of mind so that we too can become better writers."
+},
+    {"id": 0,
+    "title": "test 1",
+    "url": "test1",
+    "img": "https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "date": "October 31, 2021",
+"content": "lot of html1"},
+    {"id": 1,
+        "title": "test 2",
+        "url": "test2",
+        "img": "https://images.pexels.com/photos/7640773/pexels-photo-7640773.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "date": "October 31, 2021",
+        "content": "lot of html2"},
+        {"id": 2,
+            "title": "test 3",
+            "url": "test3",
+            "img": "https://images.pexels.com/photos/8617636/pexels-photo-8617636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "date": "October 31, 2021",
+            "content": "lot of html3"}
+    ]
+
+}
