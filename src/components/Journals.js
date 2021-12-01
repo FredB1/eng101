@@ -5,7 +5,7 @@ const Journals = () => {
   const [data,setData]=useState([]);
 
     const getData=()=>{
-        fetch('data.json'
+        fetch('../public/data.json'
         ,{
           headers : { 
             'Content-Type': 'application/json',
