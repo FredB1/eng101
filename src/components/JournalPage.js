@@ -30,9 +30,11 @@ useEffect(()=>{
  
 },[post])
 
-return(<div>
-<h1>{post && post.title} </h1>
-<p> {post && post.content}</p>
+return(<div className="blogContainer">
+  <p> {post && post.date}</p>
+<h1 className="centered">{post && post.title} </h1>
+
+{post && <p className="blogText" dangerouslySetInnerHTML={{__html: post.content}}/>}
 </div>
 
 )}

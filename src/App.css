@@ -38,7 +38,20 @@ transition: border ease 5s;
 .card-img-top{
   width: 20em;
   margin: auto;
+  height: 21em;
 }
 .card-footer{
   margin-bottom: 0;
+}
+.centered{
+  text-align: center;
+}
+.blogText{
+  line-height: 200%;
+}
+.blogContainer{
+  padding: 1em 2em;
+}
+.fixed-bottom{
+  position: unset;
 }
