@@ -5,7 +5,7 @@ const Journals = () => {
   const [data,setData]=useState([]);
 
     const getData=()=>{
-        fetch('../public/data.json'
+        fetch('data.json'
         ,{
           headers : { 
             'Content-Type': 'application/json',
@@ -28,13 +28,13 @@ const Journals = () => {
 
     return (
               
-                          <div class="cardContainer">
+                          <div className="cardContainer">
                   {data && data.length>0 && data.map((item)=>
                       <Link to={item.url} key={item.id}>
-                          <div class="card" >
-                              <div class="card-header">{item.title}</div>
-                              <img src={item.img} class="card-img-top" alt={item.title}></img>
-                              <p class="card-footer text-muted">{item.date}</p>
+                          <div className="card" >
+                              <div className="card-header">{item.title}</div>
+                              <img src={item.img} className="card-img-top" alt={item.title}></img>
+                              <p className="card-footer text-muted">{item.date}</p>
                           </div>
                       </Link>
                          )}

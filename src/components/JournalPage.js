@@ -4,11 +4,11 @@ import { Route, Link, useParams } from "react-router-dom";
 
 const JournalPage = ()=> {
   const { title } = useParams();
-  const [data,setData]=useState([]);
-  const [post, setPost]= useState([]);
+  const [data,setData]=useState(null);
 
-  const getData= ()=>{
-    fetch('http://localhost:3000/data.json'
+
+useEffect(()=>{
+  fetch('../data.json'
     ,{
       headers : { 
         'Content-Type': 'application/json',
@@ -21,14 +21,10 @@ const JournalPage = ()=> {
       })
       .then(function(myJson) {
         setData(myJson.blogs);
-        setPost(data && data.find(post => post.url === title ))
       })
-  }
-
-useEffect(()=>{
-  getData()
  
-},[post])
+},[])
+let post = data && data.find(post => post.url === title )
 
 return(<div className="blogContainer">
   <p> {post && post.date}</p>
