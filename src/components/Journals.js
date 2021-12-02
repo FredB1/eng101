@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { BrowserRouter, Route, Link, useParams, Routes, Outlet } from "react-router-dom";
+import { Link, useParams, Routes, Outlet } from "react-router-dom";
 import {JournalPage} from './JournalPage.js';
 const Journals = () => {
   const [data,setData]=useState([]);

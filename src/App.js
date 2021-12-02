@@ -6,7 +6,7 @@ import {JournalPage} from './components/JournalPage';
 function App() {
   return (
     <div className="App">
-    <Router basename="eng101/">
+    <HashRouter basename="/">
     <Header/>
           <Routes>
             <Route path="/" element={<Home/>} />
@@ -15,7 +15,7 @@ function App() {
             <Route path="/journals/:title" element={<JournalPage />}/>
           </Routes>
         <Footer/>
-    </Router>
+    </HashRouter>
     </div>
   );
 }
