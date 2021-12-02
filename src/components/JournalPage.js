@@ -8,7 +8,7 @@ const JournalPage = ()=> {
 
 
 useEffect(()=>{
-  fetch('../data.json'
+  fetch('data.json'
     ,{
       headers : { 
         'Content-Type': 'application/json',
