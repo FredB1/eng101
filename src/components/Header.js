@@ -6,7 +6,7 @@ const Header = (props) => {
         <div className="navigation">
             <nav className="nav navbar navbar-expand navbar-light bg-light">
             
-                <Link className="navbar-brand" to="/">English 101 with Fred</Link>
+                <Link className="navbar-brand" to="/">English with Fred</Link>
                 <div className="navbar-nav ml-auto">
                     <Link to="/" className={"nav-link"} activestyle={"active nav-link"}>Home</Link>
                     <Link to="/about" className={"nav-link"} activestyle={"active nav-link"}>About</Link>

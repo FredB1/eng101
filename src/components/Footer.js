@@ -7,7 +7,7 @@ const Footer = () => {
            <footer className="py-4 bg-light fixed-bottom">
         <div className="container">
           <p className="m-0 text-center text-muted">
-            Copyright &copy; English 101 with Fred 2021
+            Copyright &copy; English with Fred 2022
           </p>
         </div>
       </footer>  
