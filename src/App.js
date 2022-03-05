@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route, BrowserRouter as Router} from "react-router-
 import './App.css';
 import {About, Header, Home, Journals, Footer} from './components'
 import {JournalPage} from './components/JournalPage';
+import data from './data.json'
 function App() {
   return (
     <div className="App">
@@ -11,8 +12,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/about" element={<About />} />
-            <Route path="/journals" element={<Journals />}/>
-            <Route path="/journals/:title" element={<JournalPage />}/>
+            <Route path="/journals" element={<Journals data={data.blogs}/>}/>
+            <Route path="/journals/:title" element={<JournalPage data={data.blogs}/>}/>
           </Routes>
         <Footer/>
     </HashRouter>
